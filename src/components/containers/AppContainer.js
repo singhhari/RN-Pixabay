@@ -3,16 +3,9 @@ import React from 'react';
 import SearchContainer from './SearchContainer';
 import { connect } from 'react-redux';
 
-const mapStateToProps = state => {
-    return state
-};
+const AppContainer = (props) => (
+    <SearchContainer {...props} />
+)
 
-const mapDispatchToProps = {};
 
-const AppContainer = (props) => {
-    return (
-        <SearchContainer {...props} />
-    )
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(AppContainer);
+export default connect(null, null)(AppContainer);

@@ -16,15 +16,15 @@ export const styles = StyleSheet.create({
         paddingLeft: padding.large,
         paddingTop: 40
     },
-    searchPresentationalContainer: { 
+    searchPresentationalContainer: {
         flex: 1,
-        paddingLeft: 16, 
-        paddingRight: 16 
+        paddingLeft: 16,
+        paddingRight: 16
     },
-    placeholderViewContainer: { 
-        flex: 2, 
-        alignItems: 'center', 
-        justifyContent: 'center' 
+    placeholderViewContainer: {
+        flex: 2,
+        alignItems: 'center',
+        justifyContent: 'center'
     },
     textInputContainer: {
         flex: 2,
@@ -61,5 +61,26 @@ export const styles = StyleSheet.create({
         paddingRight: padding.large,
         paddingTop: padding.small,
         paddingBottom: padding.small
+    },
+    detailViewContainer: {
+        flex: 2,
+        alignItems: 'center',
+        justifyContent: 'flex-end',
+        paddingBottom: padding.large,
+        paddingTop: padding.large
+    },
+    detailViewTextContainer: {
+        flex: 2,
+        alignItems: 'center',
+        justifyContent: "flex-start"
+    },
+    imageHeight: {
+        height: 250
+    },
+    detailText: {
+        paddingTop: padding.small,
+        paddingBottom: padding.small,
+        fontFamily: fonts.cochin,
+        fontSize: fonts.large
     }
 })

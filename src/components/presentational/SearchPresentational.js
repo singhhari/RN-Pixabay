@@ -19,14 +19,17 @@ import {
     pixabayLogo
 } from '../../images';
 
+const PER_PAGE = 20
+
 const PhotoCell = ({ item, navigation }) => {
     return (
         <View style={styles.photoCellContainer}>
             <TouchableOpacity
                 activeOpacity={0.7}
-                onPress={() => navigation.navigate('SearchDetailContainer')}>
+                onPress={() =>
+                    navigation.push('SearchDetailContainer', { item })}>
                 <Image
-                    style={{ height: 250 }}
+                    style={styles.imageHeight}
                     aspectRatio={3 / 2}
                     resizeMode={'contain'}
                     source={{ uri: item.webformatURL }} />
@@ -39,7 +42,7 @@ const SearchPresentational = ({ photos, getPhotos, getMorePhotos, navigation }) 
     const { hits } = photos
     const onEndReached = () => {
         const { page, total, query } = photos
-        if (page * 20 < total) {
+        if (page * PER_PAGE < total) {
             getMorePhotos(query, page)
         }
     }
@@ -80,7 +83,9 @@ const SearchPresentational = ({ photos, getPhotos, getMorePhotos, navigation }) 
 
 SearchPresentational.propTypes = {
     photos: PropTypes.object,
-    getPhotos: PropTypes.func.isRequired
+    getPhotos: PropTypes.func.isRequired,
+    getMorePhotos: PropTypes.func.isRequired,
+    navigation: PropTypes.object
 }
 
 export default SearchPresentational;
