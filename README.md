@@ -23,11 +23,6 @@ _Note: I used npm during development
 
 [API documentation](https://pixabay.com/api/docs/)
 
-Familiarize yourself with the rules being used in the associated .eslintrc and .stylelintrc.json configs.
-
-There are git pre-commit hooks (implemented using [Husky](https://github.com/typicode/husky) 
-and [lint-staged](https://www.npmjs.com/package/lint-staged) to enforce formatting and linting rules.
-
 ## Git Process
 
 - This is a public repo. If you want to make improvements, raise a PR on a feature branch.
