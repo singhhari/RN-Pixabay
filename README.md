@@ -2,19 +2,18 @@
 - A cross-platform mobile client that browses images provided by the [Pixabay](https://pixabay.com/) API
 
 ## Requirements
-- There's a handful of platform specific dependencies you will need to run this
+- There's a handful of platform specific dependencies required to run this project.
 - Node.js `brew install node@8.3`or later is recommended.
 
 Once that's setup, you'll need:
-- XCode (9.4 or up) + XCode Command Line Tools + [CocoaPods](https://cocoapods.org/)
-- This will enable you to run the project on iOS simulators/devices.
+- AndroidStudio & XCode (9.4 or up) + XCode Command Line Tools + [CocoaPods](https://cocoapods.org/)
+- This will enable you to run the project on Android/iOS emulators.
 
-Also necessary is a package manager for web development. These are the two most popular:
-- [npm](https://www.npmjs.com/)
+Also necessary is a package manager for web development. These two are the most popular:
+- [npm](https://www.npmjs.com/) 
 - [Yarn](https://yarnpkg.com/)
 
-_Note: It is recommended but not necessary to use [yvm](https://github.com/tophat/yvm) 
-as it facilitates yarn version control._
+_Note: I used npm during development
 
 ## Local Development
 - Install requirements. (above)
