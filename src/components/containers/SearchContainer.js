@@ -20,9 +20,9 @@ const mapDispatchToProps = {
     getMorePhotos
 };
 
-const SearchContainer = ({ photos, getPhotos, getMorePhotos}) => {
+const SearchContainer = (props) => {
     return (
-        <SearchPresentational photos={photos} getPhotos={getPhotos} getMorePhotos={getMorePhotos} />
+        <SearchPresentational {...props} />
     );
 }
 

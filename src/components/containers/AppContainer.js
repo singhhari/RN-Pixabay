@@ -9,8 +9,10 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = {};
 
-const AppContainer = () => (
-    <SearchContainer />
-)
+const AppContainer = (props) => {
+    return (
+        <SearchContainer {...props} />
+    )
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(AppContainer);

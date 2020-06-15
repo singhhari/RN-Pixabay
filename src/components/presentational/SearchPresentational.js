@@ -19,23 +19,23 @@ import {
     pixabayLogo
 } from '../../images';
 
-const PhotoCell = (item) => {
+const PhotoCell = ({ item, navigation }) => {
     return (
         <View style={styles.photoCellContainer}>
             <TouchableOpacity
                 activeOpacity={0.7}
-                onPress={() => console.log("onPress")}>
+                onPress={() => navigation.navigate('SearchDetailContainer')}>
                 <Image
                     style={{ height: 250 }}
                     aspectRatio={3 / 2}
                     resizeMode={'contain'}
-                    source={{ uri: item.item.webformatURL }} />
+                    source={{ uri: item.webformatURL }} />
             </TouchableOpacity>
         </View>
     )
 };
 
-const SearchPresentational = ({ photos, getPhotos, getMorePhotos }) => {
+const SearchPresentational = ({ photos, getPhotos, getMorePhotos, navigation }) => {
     const { hits } = photos
     const onEndReached = () => {
         const { page, total, query } = photos
@@ -49,7 +49,9 @@ const SearchPresentational = ({ photos, getPhotos, getMorePhotos }) => {
             return (
                 <FlatList
                     data={photos.hits}
-                    renderItem={(hit) => <PhotoCell item={hit.item} />}
+                    renderItem={(hit) => <PhotoCell
+                        item={hit.item}
+                        navigation={navigation} />}
                     keyExtractor={(item, index) => `list-item-${index}`}
                     onEndReachedThreshold={0.6}
                     onEndReached={() => onEndReached({ photos, getMorePhotos })}
