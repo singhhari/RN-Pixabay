@@ -1,9 +1,11 @@
 # RN-Pixabay
 - A React-Native + Redux mobile client that browses images provided by the [Pixabay](https://pixabay.com/) API
+- Because this was created via `react-native init`, you can use native iOS and Android code, in addition to JS.
 
 ## Requirements
 - There's a handful of platform specific dependencies required to run this project.
 - Node.js `brew install node@8.3`or later is recommended.
+- Native iOS development typically requires MacOS.
 
 Once that's setup, you'll need:
 - AndroidStudio & XCode (9.4 or up) + XCode Command Line Tools + [CocoaPods](https://cocoapods.org/)
