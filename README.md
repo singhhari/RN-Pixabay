@@ -1,5 +1,5 @@
 # RN-Pixabay
-- A cross-platform mobile client that browses images provided by the [Pixabay](https://pixabay.com/) API
+- A React-Native + Redux mobile client that browses images provided by the [Pixabay](https://pixabay.com/) API
 
 ## Requirements
 - There's a handful of platform specific dependencies required to run this project.
@@ -20,6 +20,10 @@ _Note: I used npm during development
 - Checkout this repo.
 - Install dependencies by running `npm install`
 - Run `react-native run-ios` OR `react-native run-android` (The Android emulator will have to be open before running this command)
+
+## Useful Dev Tools
+- [React Native Debugger](https://github.com/jhen0409/react-native-debugger) 
+- [redux-devTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
 
 [API documentation](https://pixabay.com/api/docs/)
 
